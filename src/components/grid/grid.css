@@ -3,26 +3,12 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0; /* Set your desired background color */
+    background-color: #282c34; /* Background color for the body */
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 100px); /* Adjust the size of each cell as needed */
+    grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
-    gap: 5px; /* Adjust the gap between cells as needed */
-}
-
-.card {
-    border: 1px solid #ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5em;
-    background-color: #fff; /* Set your desired background color for the cells */
-    cursor: pointer; /* Add cursor pointer for better interaction */
-}
-
-.card:hover {
-    background-color: #e0e0e0; /* Set a different background color on hover if desired */
+    gap: 10px; /* Adjust the gap between cells as needed */
 }
