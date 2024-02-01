@@ -1,14 +1,18 @@
-.body {
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #282c34; /* Background color for the body */
+    background-color: black; /* Background color for the body */
 }
 
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
-    gap: 10px; /* Adjust the gap between cells as needed */
+    gap: 5px; /* Adjust the gap between cells as needed */
+}
+
+.turnHighlight{
+    color: white;
 }

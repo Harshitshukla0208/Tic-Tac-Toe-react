@@ -1,38 +1,26 @@
-import Icon from '../icon/Icon'
-import './Card.css' 
+import Icon from '../icon/Icon';
+import './Card.css';
 
-function Card({iconName}) {
-    return(
-        <div className="card">
-            <div className='card1'>
-                <Icon name={iconName}/>
-            </div>
-            <div className='card2'>
-                <Icon name={iconName}/>
-            </div>
-            <div className='card3'>
-                <Icon name={iconName}/>
-            </div>
-            <div className='card4'>
-                <Icon name={iconName}/>
-            </div>
-            <div className='card5'>
-                <Icon name={iconName}/>
-            </div>
-            <div className='card6'>
-                <Icon name={iconName}/>
-            </div>
-            <div className='card7'>
-                <Icon name={iconName}/>
-            </div>
-            <div className='card8'>
-                <Icon name={iconName}/>
-            </div>
-            <div className='card9'>
-                <Icon name={iconName}/>
-            </div>
+function Card({ onPlay, player, index, turn, gridSize }) {
+    let icon = <Icon />;
+    
+    if (player === "X") {
+        icon = <Icon name={"cross"} />;
+    } else if (player === "O") {
+        icon = <Icon name={"circle"} />;
+    }
+
+    const handleClick = () => {
+        if (onPlay) {
+            onPlay(index, turn);
+        }
+    };
+
+    return (
+        <div className={`card card${index + 1}`} onClick={handleClick}>
+            {icon}
         </div>
-    )
+    );
 }
 
 export default Card;

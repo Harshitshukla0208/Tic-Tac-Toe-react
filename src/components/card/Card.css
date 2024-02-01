@@ -5,130 +5,96 @@
     gap: 0px; /* Adjust the gap between cards as needed */
 }
 
-/* .card1:hover,
-.card2:hover,
-.card3:hover,
-.card4:hover,
-.card5:hover,
-.card6:hover,
-.card7:hover,
-.card8:hover,
-.card9:hover {
+.grid{
     background-color: #3498db;
-    color: #ecf0f1;
-    transform: scale(1.05);
-} */
+}
 
 .card1{
-    border-bottom: 2px solid #3498db;
-    border-right: 2px solid #3498db;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2em;
-    background-color: #282c34;
+    background-color: black;
     color: #3498db;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
 }
 .card2{
-    border-bottom: 2px solid #3498db;
-    border-right: 2px solid #3498db;
-    border-left: 2px solid #3498db;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2em;
-    background-color: #282c34;
+    background-color: black;
     color: #3498db;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
 }
 .card3{
-    border-bottom: 2px solid #3498db;
-    border-left: 2px solid #3498db;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2em;
-    background-color: #282c34;
+    background-color: black;
     color: #3498db;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
 }
 .card4{
-    border-bottom: 2px solid #3498db;
-    border-right: 2px solid #3498db;
-    border-top: 2px solid #3498db;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2em;
-    background-color: #282c34;
+    background-color: black;
     color: #3498db;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
 }
 .card5{
-    border-bottom: 2px solid #3498db;
-    border-right: 2px solid #3498db;
-    border-left: 2px solid #3498db;
-    border-top: 2px solid #3498db;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2em;
-    background-color: #282c34;
+    background-color: black;
     color: #3498db;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
 }
 .card6{
-    border-bottom: 2px solid #3498db;
-    border-left: 2px solid #3498db;
-    border-top: 2px solid #3498db;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2em;
-    background-color: #282c34;
+    background-color: black;
     color: #3498db;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
 }
 .card7{
-    border-right: 2px solid #3498db;
-    border-top: 2px solid #3498db;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2em;
-    background-color: #282c34;
+    background-color: black;
     color: #3498db;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
 }
 .card8{
-    border-right: 2px solid #3498db;
-    border-left: 2px solid #3498db;
-    border-top: 2px solid #3498db;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2em;
-    background-color: #282c34;
+    background-color: black;
     color: #3498db;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
 }
 .card9{
-    border-left: 2px solid #3498db;
-    border-top: 2px solid #3498db;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2em;
-    background-color: #282c34;
+    background-color: black;
     color: #3498db;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
