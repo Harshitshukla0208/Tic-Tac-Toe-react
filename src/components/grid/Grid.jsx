@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Card from "../card/Card";
+import { ToastContainer, toast } from 'react-toastify';
+
 import './grid.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Grid() {
-    const [turn, setTurn] = useState(true); // if false then X is having the turn | if true then O having the turn
-    const gridSize = 3; // Assuming a 3x3 grid
+    const [turn, setTurn] = useState(true);
+    const gridSize = 3;
     const [board, setBoard] = useState(Array(gridSize * gridSize).fill(""));
     const [winner, setWinner] = useState(null);
 
@@ -32,17 +35,23 @@ function Grid() {
         
         const newBoard = [...board];
         newBoard[index] = turn ? "O" : "X";
-
+    
         const win = isWinner(newBoard, turn ? "O" : "X");
         console.log("winner is", win);
         
+        setBoard(newBoard);
+        setTurn(!turn);
+    
         if (win) {
             setWinner(win);
         }
+    }    
 
-        setBoard(newBoard);
-        setTurn(!turn);
-    }
+    useEffect(() => {
+        if (winner) {
+            toast.success(`Congrats ${winner} won the game !!`);
+        }
+    }, [winner]);
 
     function reset(){
         setBoard(Array(gridSize * gridSize).fill(""));
@@ -55,16 +64,17 @@ function Grid() {
             <h1 className="turnHighlight">Current Turn: {(turn) ? 'O' : 'X'}</h1>
             <div className="grid">
                 {board.map((value, idx) => (
-                    <Card onPlay={play} player={value} key={idx} index={idx} />
+                    <Card gameEnd={winner ? true : false} onPlay={play} player={value} key={idx} index={idx} />
                 ))}
             </div>
             {winner && (
                 <>
                     <h1 className="turnHighlight">Winner is {winner}</h1>
+                    <ToastContainer position="top-center" />
                 </>
             )}
-            <div class="reset-container">
-                <button class="reset" onClick={reset}>Reset Game</button>
+            <div className="reset-container">
+                <button className="reset" onClick={reset}>Reset Game</button>
             </div>        
         </>
     );
