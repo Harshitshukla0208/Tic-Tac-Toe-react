@@ -1,7 +1,7 @@
 import Icon from '../icon/Icon';
 import './Card.css';
 
-function Card({ onPlay, player, index, turn, gridSize }) {
+function Card({ onPlay, player, index }) {
     let icon = <Icon />;
     
     if (player === "X") {
@@ -10,14 +10,8 @@ function Card({ onPlay, player, index, turn, gridSize }) {
         icon = <Icon name={"circle"} />;
     }
 
-    const handleClick = () => {
-        if (onPlay) {
-            onPlay(index, turn);
-        }
-    };
-
     return (
-        <div className={`card card${index + 1}`} onClick={handleClick}>
+        <div className={`card card${index + 1}`} onClick={() => onPlay(index)}>
             {icon}
         </div>
     );
