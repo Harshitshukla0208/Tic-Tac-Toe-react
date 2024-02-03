@@ -1,16 +1,8 @@
-```markdown
 # Tic Tac Toe Game with Vite and React 
 
 link : https://harshit-tic-tac-toe.netlify.app/
 
 Welcome to my Tic Tac Toe game built with Vite and React! This simple yet classic game allows two players to compete against each other in a battle of Xs and Os.
-
-## Table of Contents
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 - **Responsive Design:** Play the game seamlessly on various devices, thanks to the responsive layout.
@@ -55,4 +47,3 @@ Contributions are welcome! If you have any suggestions, improvements, or bug fix
 This project is licensed under the [MIT License](LICENSE.md).
 
 Happy gaming!
-```

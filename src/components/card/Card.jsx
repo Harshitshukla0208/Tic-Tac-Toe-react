@@ -1,7 +1,7 @@
 import Icon from '../icon/Icon';
 import './Card.css';
 
-import clickSound from '../click-sound/sound.mp3'
+import clickSound from '../click-sound/clickSound.mp3'
 
 function Card({ onPlay, player, index, gameEnd }) {
     let icon = <Icon />;
