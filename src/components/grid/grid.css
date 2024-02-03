@@ -59,4 +59,12 @@ body {
     border-color: #fff;
 }
 
-
+.github-icon {
+    margin-top: 20px;
+    margin-left: 120px ;
+    font-size: 30px;
+    display: inline-block;
+    padding: 10px 20px;
+    color: whitesmoke;
+    transition: color 0.3s;
+}

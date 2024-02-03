@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Card from "../card/Card";
-import { ToastContainer, toast } from 'react-toastify';
 
+import { FaGithub } from "react-icons/fa6";
+import toast from "react-hot-toast";
 import './grid.css';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -44,14 +45,9 @@ function Grid() {
     
         if (win) {
             setWinner(win);
+            toast.success(`Winner is ${win}`)
         }
-    }    
-
-    useEffect(() => {
-        if (winner) {
-            toast.success(`Congrats ${winner} won the game !!`);
-        }
-    }, [winner]);
+    }
 
     function reset(){
         setBoard(Array(gridSize * gridSize).fill(""));
@@ -62,20 +58,22 @@ function Grid() {
     return ( 
         <>
             <h1 className="turnHighlight">Current Turn: {(turn) ? 'O' : 'X'}</h1>
+            {winner}
             <div className="grid">
                 {board.map((value, idx) => (
                     <Card gameEnd={winner ? true : false} onPlay={play} player={value} key={idx} index={idx} />
                 ))}
             </div>
-            {winner && (
-                <>
-                    <h1 className="turnHighlight">Winner is {winner}</h1>
-                    <ToastContainer position="top-center" />
-                </>
-            )}
+            
             <div className="reset-container">
                 <button className="reset" onClick={reset}>Reset Game</button>
-            </div>        
+            </div> 
+            
+            <div>
+                <a href="https://github.com/Harshitshukla0208/Tic-Tac-Toe-react" target="_blank" rel="noopener noreferrer">
+                    <FaGithub className="github-icon" />
+                </a>
+            </div>
         </>
     );
 }
